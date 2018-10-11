@@ -55,8 +55,13 @@ function changeVocals (str) {
     var reverse = reverseWord(change)
     var switchCase = setLowerUpperCase(reverse)
     var noSpace = removeSpaces(switchCase)
-    return noSpace
-  }
+    if(name.length < 5){
+        return "Minimal karakter yang diinputkan adalah 5 karakter"
+    } 
+    else{
+        return noSpace
+    }  
+}
   
   console.log(passwordGenerator('Sergei Dragunov')); // 'VPNVGBRdJFGRFs'
   console.log(passwordGenerator('Dimitri Wahyudiputra')); // 'BRTVPJDVYHBwJRTJMJd'
